@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-Name:           quikscak
+Name:           quikscan
 Version:        0.1
 Release:        1%{?dist}
 Summary:        A GUI for hp-scan
