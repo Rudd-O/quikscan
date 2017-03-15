@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=QuikScan
+Exec=@BINDIR@/quikscan
+Icon=application-x-executable
+Terminal=false
+TryExec=@BINDIR@/quikscan
+Type=Application
+Categories=Graphics;2DGraphics;RasterGraphics;Scanning;GTK;
+X-AppInstall-Keywords=hp-scan
