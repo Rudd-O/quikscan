@@ -10,6 +10,9 @@ dist: clean
 rpm: dist
 	T=`mktemp -d` && rpmbuild --define "_topdir $$T" -ta quikscan-`awk '/^Version:/ {print $$2}' rpm/quikscan.spec`.tar.gz || { rm -rf "$$T"; exit 1; } && mv "$$T"/RPMS/noarch/* "$$T"/SRPMS/* . || { rm -rf "$$T"; exit 1; } && rm -rf "$$T"
 
+srpm: dist
+	T=`mktemp -d` && rpmbuild --define "_topdir $$T" -ts quikscan-`awk '/^Version:/ {print $$2}' rpm/quikscan.spec`.tar.gz || { rm -rf "$$T"; exit 1; } && mv "$$T"/SRPMS/* . || { rm -rf "$$T"; exit 1; } && rm -rf "$$T"
+
 install: all
 	install -Dm 755 bin/quikscan -t $(DESTDIR)/$(BINDIR)/
 	install -Dm 644 desktop/quikscan.desktop -t $(DESTDIR)/$(DESKTOPDIR)/

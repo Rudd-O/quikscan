@@ -1,1 +1,3 @@
+*.tar.gz
+*.rpm
 desktop/*.desktop

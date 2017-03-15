@@ -3,7 +3,7 @@
 %define mybuildnumber %{?build_number}%{?!build_number:1}
 
 Name:           quikscan
-Version:        0.1.1
+Version:        0.1.2
 Release:        %{mybuildnumber}%{?dist}
 Summary:        A GUI for hp-scan
 
