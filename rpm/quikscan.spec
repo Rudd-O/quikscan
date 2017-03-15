@@ -1,8 +1,10 @@
 %define debug_package %{nil}
 
+%define mybuildnumber %{?build_number}%{?!build_number:1}
+
 Name:           quikscan
 Version:        0.1
-Release:        1%{?dist}
+Release:        %{mybuildnumber}%{?dist}
 Summary:        A GUI for hp-scan
 
 License:        GPLv3+
