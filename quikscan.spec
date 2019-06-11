@@ -3,7 +3,7 @@
 %define mybuildnumber %{?build_number}%{?!build_number:1}
 
 Name:           quikscan
-Version:        0.1.2
+Version:        0.1.3
 Release:        %{mybuildnumber}%{?dist}
 Summary:        A GUI for hp-scan
 
@@ -13,7 +13,7 @@ Source0:	Source0: https://github.com/Rudd-O/%{name}/archive/{%version}.tar.gz#/%
 
 BuildRequires:  make
 BuildArch:	noarch
-Requires:       python2, gobject-introspection, gtk3, pygobject3, hplip
+Requires:       python3, gobject-introspection, gtk3, pygobject3, hplip
 
 %description
 quikscan is a GUI frontend for HP's hp-scan scanning tool.
